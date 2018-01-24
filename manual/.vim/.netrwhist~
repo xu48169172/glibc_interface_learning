@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/mnt/fileroot/shi.liu/droid/common/arch/avr32/mm'
+let g:netrw_dirhist_2='/mnt/fileroot/shi.liu/droid/common'
+let g:netrw_dirhist_3='/mnt/fileroot/shi.liu/droid/common/arch'
+let g:netrw_dirhist_4='/mnt/fileroot/shi.liu/droid/common/arch/avr32'
+let g:netrw_dirhist_5='/mnt/fileroot/shi.liu/droid/common/arch/avr32/lib'
+let g:netrw_dirhist_6='/mnt/fileroot/shi.liu/droid/common'
+let g:netrw_dirhist_7='/mnt/fileroot/shi.liu/droid'
