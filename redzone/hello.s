@@ -7,7 +7,7 @@ Disassembly of section .text:
 0000000000000000 <test_red>:
    0:	55                   	push   %rbp
    1:	48 89 e5             	mov    %rsp,%rbp
-   4:	c7 45 fc 0a 00 00 00 	movl   $0xa,-0x4(%rbp)
+   4:	c7 45 fc 0a 00 00 00 	movl   $0xa,-0x4(%rbp) // cause rezone no need   allocate stack
    b:	c7 45 f8 14 00 00 00 	movl   $0x14,-0x8(%rbp)
   12:	c7 45 f4 10 00 00 00 	movl   $0x10,-0xc(%rbp)
   19:	8b 45 f8             	mov    -0x8(%rbp),%eax
@@ -21,7 +21,7 @@ Disassembly of section .text:
 0000000000000028 <test_red_zone>:
   28:	55                   	push   %rbp
   29:	48 89 e5             	mov    %rsp,%rbp
-  2c:	48 83 ec 10          	sub    $0x10,%rsp
+  2c:	48 83 ec 10          	sub    $0x10,%rsp  // need allocate stack 
   30:	c7 45 fc 0a 00 00 00 	movl   $0xa,-0x4(%rbp)
   37:	c7 45 f8 14 00 00 00 	movl   $0x14,-0x8(%rbp)
   3e:	c7 45 f4 10 00 00 00 	movl   $0x10,-0xc(%rbp)
