@@ -1,7 +1,7 @@
 
 hello.o:     file format elf64-x86-64
 
-
+// after use redzone tech, will save two instructions
 Disassembly of section .text:
 
 0000000000000000 <test_red>:
@@ -32,7 +32,7 @@ Disassembly of section .text:
   55:	01 c2                	add    %eax,%edx
   57:	8b 45 f4             	mov    -0xc(%rbp),%eax
   5a:	01 d0                	add    %edx,%eax
-  5c:	c9                   	leaveq 
+  5c:	c9                   	leaveq    // mov %rbp, %rsp; pop %rbp
   5d:	c3                   	retq   
 
 000000000000005e <main>:
